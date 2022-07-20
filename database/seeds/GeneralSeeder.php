@@ -14,7 +14,7 @@ class GeneralSeeder extends Seeder
     {
         General::create([
             'logo' => '',
-            'title' => 'SCM DPB',
+            'title' => 'INVENTORI SURAT',
             'tagline' => 'Site Tagline',
         ]);
     }
