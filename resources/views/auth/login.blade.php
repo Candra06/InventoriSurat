@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
 
-  <title>WanApp | Login</title>
+  <title>Inventori Surat | Login</title>
 
   <link rel="stylesheet" type="text/css" href="{{asset('assets/css/styles.css')}}">
 
