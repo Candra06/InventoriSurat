@@ -23,7 +23,8 @@ class SuratKeluarController extends Controller
         if (Auth::user()->role_id == 3) {
             $query = $query->where('surat_keluar.id_status', 7);
         } else  if (Auth::user()->role_id == 4) {
-            $query = $query->where('surat_keluar.id_status', 8);
+            $query = $query->where('surat_keluar.id_status', 7);
+            $query = $query->orWhere('surat_keluar.id_status', 8);
             $query = $query->orWhere('surat_keluar.id_status', 9);
         }
         
