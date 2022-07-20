@@ -69,7 +69,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <input type="file" name="file_surat" value="{{old('file_surat')}}" class="form-control @error('file_surat') is-invalid @enderror" placeholder="File Surat">
+                                <input type="file" required name="file_surat" value="{{old('file_surat')}}" class="form-control @error('file_surat') is-invalid @enderror" placeholder="File Surat">
                                 @error('file_surat')
                                     <div class="invalid-feedback">
                                         {{$message}}
