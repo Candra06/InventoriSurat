@@ -61,7 +61,7 @@
                         <div class="col-lg-12 d-flex justify-content-between">
                             <div class="">
                             </div>
-                            @if ($data->id_status == 8 && Auth::user()->role_id == 4)
+                            @if ($data->id_status == 8 && Auth::user()->role_id == 4 || $data->id_status == 7 && Auth::user()->role_id == 4)
                                 <input type="hidden" name="tipe" value="1">
                                 <button class="btn btn-primary" type="submit">Teruskan Surat ke Tujuan</button>
                            @endif
