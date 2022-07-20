@@ -17,7 +17,10 @@ use Illuminate\Support\Facades\Route;
 
 
 Auth::routes();
-
+Route::get('/', function()
+{
+    return redirect('/login');
+});
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/access/block', 'BlockController@index');
 
