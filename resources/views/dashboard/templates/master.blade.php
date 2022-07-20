@@ -52,7 +52,7 @@
           <div class="container-fluid">
               <div class="row">
                   <div class="col-md-6 small">
-                    Copyright &#xA9; <a href="http://hendrawan.tech" class="text-decoration-none text-primary">HendrawanTech</a> 2020
+                    Copyright &#xA9; <a href="" class="text-decoration-none text-primary">Inventori Surat</a> 2022
                   </div>
                   <div class="col-md-6 text-md-right small">
                       <a href="#!">Privacy Policy</a>

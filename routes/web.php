@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,4 +35,8 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth']], function () {
     Route::resource('/users/index', 'Dashboard\UserController');
     Route::resource('/posts/post', 'Dashboard\PostController');
     Route::resource('/posts/category', 'Dashboard\CategoryController');
+    Route::resource('/surat/index', 'Dashboard\SuratController');
+    Route::resource('/surat/suratMasuk', 'Dashboard\SuratMasukController');
+    Route::resource('/surat/suratKeluar', 'Dashboard\SuratKeluarController');
+    Route::resource('/status/index', 'Dashboard\StatusController');
 });

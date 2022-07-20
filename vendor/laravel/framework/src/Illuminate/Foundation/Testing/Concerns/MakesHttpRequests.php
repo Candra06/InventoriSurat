@@ -3,6 +3,7 @@
 namespace Illuminate\Foundation\Testing\Concerns;
 
 use Illuminate\Contracts\Http\Kernel as HttpKernel;
+use Illuminate\Cookie\CookieValuePrefix;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Testing\TestResponse;
@@ -141,7 +142,8 @@ trait MakesHttpRequests
         }
 
         foreach ((array) $middleware as $abstract) {
-            $this->app->instance($abstract, new class {
+            $this->app->instance($abstract, new class
+            {
                 public function handle($request, $next)
                 {
                     return $next($request);
@@ -599,8 +601,8 @@ trait MakesHttpRequests
             return array_merge($this->defaultCookies, $this->unencryptedCookies);
         }
 
-        return collect($this->defaultCookies)->map(function ($value) {
-            return encrypt($value, false);
+        return collect($this->defaultCookies)->map(function ($value, $key) {
+            return encrypt(CookieValuePrefix::create($key, app('encrypter')->getKey()).$value, false);
         })->merge($this->unencryptedCookies)->all();
     }
 
